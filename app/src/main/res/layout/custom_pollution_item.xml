@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <data class="AqiBinding">
+<variable
+    name="onClickItem"
+    type="com.hanwool.airvisual.view.callback.OnItemRecyClickCallback" />
+        <variable
+            name="viewmodel"
+            type="com.hanwool.airvisual.viewmodel.RecyclerviewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/state_press"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:layout_marginRight="5dp"
+        android:onClick="@{()->onClickItem.onClickListener(viewmodel)}"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_location_on_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="city"
+                android:text="@{viewmodel.nameCityToLV()}"
+                android:maxLength="6"
+                android:textSize="@dimen/cityItem" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="AQI"
+            android:text="@{viewmodel.airIndexToLV()}"
+            android:textSize="@dimen/aqiItem"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:hint="Classification"
+            android:text="@{viewmodel.classificationToLV()}"
+            android:textSize="@dimen/classificationItem" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{viewmodel.dateTimeToLV()}"
+            android:textSize="@dimen/datetimeItem" />
+    </LinearLayout>
+</layout>

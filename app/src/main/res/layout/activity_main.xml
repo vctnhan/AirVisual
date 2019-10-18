@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".binh_view.MainActivity"
+        android:background="@drawable/bg_weather">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_info"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_location_on_black_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="city"
+                    android:text="@{viewmodel.nameCity()}"
+                    android:textSize="@dimen/city"
+                    android:maxLength="6"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/aqi"
+                android:layout_gravity="center"
+                android:hint="AQI"
+                android:textStyle="bold"
+                android:text="@{viewmodel.airIndex()}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.classification()}"
+                android:layout_gravity="right"
+                android:hint="Classification"/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:textSize="@dimen/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.dateTime()}"
+                />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler"
+            android:scrollbars="horizontal"/>
+    </LinearLayout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.hanwool.airvisual.viewmodel.PollutionAqiViewModel" />
+    </data>
+</layout>
