@@ -1,7 +1,5 @@
-package com.hanwool.airvisual.respository.database;
+package com.hanwool.airvisual.database;
 
-
-import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;

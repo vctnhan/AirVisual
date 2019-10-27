@@ -9,16 +9,12 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
-import android.widget.TimePicker;
-import android.widget.Toast;
 
-import com.hanwool.airvisual.GlobalApplication;
 import com.hanwool.airvisual.R;
 import com.hanwool.airvisual.databinding.ActivityMainBinding;
-import com.hanwool.airvisual.model.PollutionApi;
 import com.hanwool.airvisual.model.PollutionInfo;
-import com.hanwool.airvisual.respository.server.AqiRespository;
-import com.hanwool.airvisual.respository.server.AqiService;
+import com.hanwool.airvisual.server.AqiRespository;
+import com.hanwool.airvisual.server.AqiService;
 import com.hanwool.airvisual.view.adapter.RecyclerviewAdapter;
 import com.hanwool.airvisual.view.callback.OnItemRecyClickCallback;
 import com.hanwool.airvisual.viewmodel.PollutionAqiViewModel;

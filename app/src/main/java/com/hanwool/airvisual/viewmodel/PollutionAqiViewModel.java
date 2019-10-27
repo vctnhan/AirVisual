@@ -1,26 +1,17 @@
 package com.hanwool.airvisual.viewmodel;
 
 import android.app.Application;
-import android.util.Log;
-import android.widget.Toast;
 
-import androidx.databinding.BaseObservable;
 import androidx.databinding.ObservableField;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.hanwool.airvisual.GlobalApplication;
-import com.hanwool.airvisual.model.PollutionApi;
 import com.hanwool.airvisual.model.PollutionInfo;
-import com.hanwool.airvisual.respository.database.AppDatabase;
-import com.hanwool.airvisual.respository.database.PollutionKey;
-import com.hanwool.airvisual.respository.server.AqiRespository;
+import com.hanwool.airvisual.database.AppDatabase;
+import com.hanwool.airvisual.database.PollutionKey;
+import com.hanwool.airvisual.server.AqiRespository;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class PollutionAqiViewModel extends AndroidViewModel {

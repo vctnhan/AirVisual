@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "1031131874791",
+    "firebase_url": "https://fcm-airpollution.firebaseio.com",
+    "project_id": "fcm-airpollution",
+    "storage_bucket": "fcm-airpollution.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031131874791:android:a7855fa605176d197ae942",
+        "android_client_info": {
+          "package_name": "com.hanwool.airpollution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031131874791-b61undbuc5qrsp3asdupj0r68lda73mk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hanwool.airpollution",
+            "certificate_hash": "e068b4d3cc3cb1205da9f91b38c76f8c00dd4bbc"
+          }
+        },
+        {
+          "client_id": "1031131874791-7rogcdufchroec7jsb0f9t3l0mfm8ipt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUzpPFZQlPladiax4sU_jI6se1m-fzGFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031131874791-7rogcdufchroec7jsb0f9t3l0mfm8ipt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031131874791:android:d5659859ba99ee797ae942",
+        "android_client_info": {
+          "package_name": "com.hanwool.airvisual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031131874791-sld8ooapbrr454c7suo9a7e5uu3ciat7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hanwool.airvisual",
+            "certificate_hash": "e068b4d3cc3cb1205da9f91b38c76f8c00dd4bbc"
+          }
+        },
+        {
+          "client_id": "1031131874791-7rogcdufchroec7jsb0f9t3l0mfm8ipt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUzpPFZQlPladiax4sU_jI6se1m-fzGFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031131874791-7rogcdufchroec7jsb0f9t3l0mfm8ipt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.hanwool.airvisual.respository.database;
+package com.hanwool.airvisual.database;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

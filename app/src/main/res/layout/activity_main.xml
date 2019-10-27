@@ -8,15 +8,16 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".binh_view.MainActivity"
-        android:background="@drawable/bg_weather">
+        android:background="@drawable/bg_weather"
+        >
 
         <LinearLayout
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:background="@drawable/bg_info"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            >
 
             <LinearLayout
                 android:layout_width="wrap_content"

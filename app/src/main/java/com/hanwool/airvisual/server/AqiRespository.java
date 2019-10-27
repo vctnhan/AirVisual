@@ -1,7 +1,4 @@
-package com.hanwool.airvisual.respository.server;
-
-import android.util.Log;
-import android.widget.Toast;
+package com.hanwool.airvisual.server;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -13,7 +10,6 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
