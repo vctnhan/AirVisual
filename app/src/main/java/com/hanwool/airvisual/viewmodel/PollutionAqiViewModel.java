@@ -7,6 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.hanwool.airvisual.GlobalApplication;
+import com.hanwool.airvisual.Respository;
 import com.hanwool.airvisual.model.PollutionInfo;
 import com.hanwool.airvisual.database.AppDatabase;
 import com.hanwool.airvisual.database.PollutionKey;
@@ -17,11 +18,10 @@ import java.util.List;
 public class PollutionAqiViewModel extends AndroidViewModel {
     final LiveData<PollutionInfo> pollutionApiLiveData;
     public ObservableField<PollutionInfo> pollutionApiObservableField = new ObservableField<>();
-    public AppDatabase appDatabase = AppDatabase.getInMemoryDatabase(new GlobalApplication());
 
     public PollutionAqiViewModel(Application application) {
         super(application);
-        pollutionApiLiveData = AqiRespository.getInstance().getDataApi();
+        pollutionApiLiveData = Respository.getInstance().getDataApi();
         // nodata here
     }
 
@@ -54,11 +54,11 @@ public class PollutionAqiViewModel extends AndroidViewModel {
     }
 
     public void insertDb() {
-        appDatabase.insertDb(nameCity(), airIndex(), classification(), dateTime());
+Respository.getInstance().insertDatabase(nameCity(), airIndex(), classification(), dateTime());
     }
 
     public List<RecyclerviewModel> getArrToLv() {
-        return appDatabase.getArrToLv();
+        return Respository.getInstance().getArrToLv();
     }
 
 }
