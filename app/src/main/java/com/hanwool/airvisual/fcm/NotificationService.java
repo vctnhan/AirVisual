@@ -23,8 +23,8 @@ public class NotificationService extends FirebaseMessagingService {
                 .build();
         NotificationManagerCompat manager = NotificationManagerCompat.from(GlobalApplication.getAppContext());
         manager.notify(123, notification);
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-        
+      
+
     }
+
 }
