@@ -15,10 +15,7 @@ import java.util.List;
 
 @Database(entities = {PollutionKey.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
-
     private static AppDatabase INSTANCE;
-
-
     public abstract PollutionDao pollutionDao();
 
 
@@ -36,13 +33,19 @@ public abstract class AppDatabase extends RoomDatabase {
         INSTANCE = null;
     }
     public void insertDb(String mCity, String mAqi, String mClassification, String mDatetime){
-        AppDatabase appDatabase = AppDatabase.getInMemoryDatabase(new GlobalApplication());
-        PollutionKey pollutionKey = new PollutionKey();
-        pollutionKey.city = mCity;
-        pollutionKey.air_index = mAqi;
-        pollutionKey.classification = mClassification;
-        pollutionKey.date_time = mDatetime;
-        appDatabase.pollutionDao().insertPollution(pollutionKey);
+        if (getArrdb().size() == 0){
+            AppDatabase appDatabase = AppDatabase.getInMemoryDatabase(new GlobalApplication());
+            PollutionKey pollutionKey = new PollutionKey();
+            pollutionKey.city = mCity;
+            pollutionKey.air_index = mAqi;
+            pollutionKey.classification = mClassification;
+            pollutionKey.date_time = mDatetime;
+            appDatabase.pollutionDao().insertPollution(pollutionKey);
+        }
+        else {
+
+        }
+
     }
     public List<PollutionKey> getArrdb(){
         List<PollutionKey> arrDb = new ArrayList<>();
